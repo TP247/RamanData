@@ -18,10 +18,10 @@ def setup():
 def loop():
     while True:
         value0 = adc.analogRead(0)    # read the ADC value of channel 0
-        value1 = adc.analogRead(1)    # read the ADC value of channel 0
+        value1 = adc.analogRead(1)    # read the ADC value of channel 1
         voltage0 = value0 / 255.0 * 3.3
         voltage1 = value1 / 255.0 * 3.3
-        print ('ADC Value 1 : %d, Voltage 1 : %.2f, ADC Value 2 : %.2f, Voltage 2 : %.2f'%(value0,voltage0,value1,voltage1))
+        print ('ADC Value 1 : %d, Voltage 1 : %.2f, ADC Value 2 : %d, Voltage 2 : %.2f'%(value0,voltage0,value1,voltage1))
         time.sleep(0.01)
 
 def destroy():
